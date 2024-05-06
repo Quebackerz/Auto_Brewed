@@ -63,7 +63,7 @@ with open('input.csv') as csv_file:
         if line_count == 0:
             # Ecrire la premiere ligne dans le fichier
             with open(Fichier_Output_csv, 'a') as output_file:
-                Line_Output = 'No de facture,Client,Date de facturation,Échéance,Modalités,Lieu,Memo,Article (produit/service),Description de l’article,Quantité de l’article,Taux de l’article,Montant de l’article,Code de taxe de l’article,Montant de la taxe de l’article\n'
+                Line_Output = 'No de facture,Client,Date de facturation,Échéance,Modalités,Lieu,Message Affiché sur la facture,Article (produit/service),Description de l’article,Quantité de l’article,Taux de l’article,Montant de l’article,Code de taxe de l’article,Montant de la taxe de l’article\n'
                 output_file.write(Line_Output)
             line_count += 1
         # Si ce n'est pas la premiere ligne, prendre les valeurs des champs et ecrire dans le bon format pour le output.    
