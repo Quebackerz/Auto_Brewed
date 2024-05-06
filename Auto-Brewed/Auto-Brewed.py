@@ -34,7 +34,7 @@ print("""\
 
 #Demander le bon numero de facture a entrer et la date de facturation
 Num_Facture = int(input("Entrer le prochain numero de facture :"))-1# Au debut je dois faire -1 parce qu'au premier tour il ajoute 1.
-Maison_Mere = input("(1) Loblaws Inc.: \n (2) Sobeys Québec Inc.: \n (3) Metro Richelieu INC.: \n Entrer la maison mere : ")
+Maison_Mere = input(" (1) Loblaws Inc.: \n (2) Sobeys Québec Inc.: \n (3) Metro Richelieu INC.: \n Entrer la maison mere : ")
 Date_Facturation_Statique = input("Entre la date de facturation (YYYY-MM-DD) :")
 Date_Facturation_Statique = datetime.strptime(Date_Facturation_Statique, '%Y-%m-%d')
 
