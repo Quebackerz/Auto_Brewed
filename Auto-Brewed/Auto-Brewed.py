@@ -38,9 +38,9 @@ Maison_Mere = input(" (1) Loblaws Inc.: \n (2) Sobeys Québec Inc.: \n (3) Metro
 Date_Facturation_Statique = input("Entre la date de facturation (YYYY-MM-DD) :")
 Date_Facturation_Statique = datetime.strptime(Date_Facturation_Statique, '%Y-%m-%d')
 
-if Maison_Mere == "1": Maison_Mere = "Loblaws Inc.:"
-if Maison_Mere == "2": Maison_Mere = "Sobeys Québec Inc.:"
-if Maison_Mere == "3": Maison_Mere = "Metro Richelieu INC.:"
+if Maison_Mere == "1": Maison_Mere_Statique = "Loblaws Inc.:"
+if Maison_Mere == "2": Maison_Mere_Statique = "Sobeys Québec Inc.:"
+if Maison_Mere == "3": Maison_Mere_Statique = "Metro Richelieu INC.:"
 
 Message = "Dépots directs: Caisse Desjardins  30500-815-095-372-9 Veuillez envoyer la confirmation du dépôt.  For direct deposits:  Caisse Desjardins  30500-815-095-372-9  30500-815-095-372-9  Please send payment confirmation.  Veuillez noter que les crédits expirent après 12 mois.  Please note credit memos expire 12 months."
 
@@ -91,6 +91,7 @@ with open('input.csv') as csv_file:
                     Date_Echeance = Date_Echeance_Statique.strftime('%Y-%m-%d')
                     Modalites = "Net 30"
                     Memo = "PO:" + row[0] + Message
+                    Maison_Mere = Maison_Mere_Statique
                     Hold="True"
                   
                 # Ecrire la ligne dans le fichier output
@@ -102,6 +103,7 @@ with open('input.csv') as csv_file:
                         Date_Echeance = ""
                         Modalites = ""
                         Memo = ""
+                        Maison_Mere = ""
                         Hold="False"
             line_count += 1 
     print(f' {line_count} lignes transformees. Voir le fichier Output.csv pour importer dans Quickbooks !')
