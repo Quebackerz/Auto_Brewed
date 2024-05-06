@@ -1,0 +1,4 @@
+* No de facture;*Client;*Date de facturation;*Échéance;Modalités;Lieu;Mémo;Article (produit/service);Description de l’article;Quantité de l’article;Taux de l’article;* Montant de l’article;* Code de taxe de l’article;Montant de la taxe de l’article
+8814;IGA Extra Tremblant;2026-04-24;2026-05-22;Net 30;;PO : 104939;Cafe Funky (Paquebot);;5;15;75;Exempt;
+8814;;;;;;;Minivan Espresso (Melk);;5;16,15;80,75;Exempt;
+8814;;;;;;;430 -Cafe a Latte (Escape);;5;12,75;63,75;Exempt;
