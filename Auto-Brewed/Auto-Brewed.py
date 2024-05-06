@@ -42,7 +42,7 @@ if Maison_Mere == "1": Maison_Mere = "Loblaws Inc.:"
 if Maison_Mere == "2": Maison_Mere = "Sobeys Québec Inc.:"
 if Maison_Mere == "3": Maison_Mere = "Metro Richelieu INC.:"
 
-Message = "Dépots directs:\n Caisse Desjardins \n 30500-815-095-372-9 \n Veuillez envoyer la confirmation du dépôt. \n\n For direct deposits: \n Caisse Desjardins \n 30500-815-095-372-9 \n 30500-815-095-372-9 \n Please send payment confirmation. \n Veuillez noter que les crédits expirent après 12 mois. \n Please note credit memos expire 12 months."
+Message = "Dépots directs: Caisse Desjardins  30500-815-095-372-9 Veuillez envoyer la confirmation du dépôt.  For direct deposits:  Caisse Desjardins  30500-815-095-372-9  30500-815-095-372-9  Please send payment confirmation.  Veuillez noter que les crédits expirent après 12 mois.  Please note credit memos expire 12 months."
 
 # Calcul de 30 jours pour la date d'Echeance 
 #Date_Echeance_Statique = input("Entre la date d'echeance (YYYY-MM-DD) :")
