@@ -41,7 +41,9 @@ Date_Facturation_Statique = datetime.strptime(Date_Facturation_Statique, '%Y-%m-
 if Maison_Mere == "1": Maison_Mere = "Loblaws Inc.:"
 if Maison_Mere == "2": Maison_Mere = "Sobeys Québec Inc.:"
 if Maison_Mere == "3": Maison_Mere = "Metro Richelieu INC.:"
-    
+
+Message = "Dépots directs:\n Caisse Desjardins \n 30500-815-095-372-9 \n Veuillez envoyer la confirmation du dépôt. \n\n For direct deposits: \n Caisse Desjardins \n 30500-815-095-372-9 \n 30500-815-095-372-9 \n Please send payment confirmation. \n Veuillez noter que les crédits expirent après 12 mois. \n Please note credit memos expire 12 months."
+
 # Calcul de 30 jours pour la date d'Echeance 
 #Date_Echeance_Statique = input("Entre la date d'echeance (YYYY-MM-DD) :")
 Date_Echeance_Statique = Date_Facturation_Statique + timedelta(days=30) 
@@ -88,7 +90,7 @@ with open('input.csv') as csv_file:
                     Date_Facturation = Date_Facturation_Statique.strftime('%Y-%m-%d')
                     Date_Echeance = Date_Echeance_Statique.strftime('%Y-%m-%d')
                     Modalites = "Net 30"
-                    Memo = "PO:" + row[0]
+                    Memo = "PO:" + row[0] + Message
                     Hold="True"
                   
                 # Ecrire la ligne dans le fichier output
