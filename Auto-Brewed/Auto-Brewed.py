@@ -34,9 +34,14 @@ print("""\
 
 #Demander le bon numero de facture a entrer et la date de facturation
 Num_Facture = int(input("Entrer le prochain numero de facture :"))-1# Au debut je dois faire -1 parce qu'au premier tour il ajoute 1.
+Maison_Mere = input("Entrer la maison mere : \n (1) Loblaws Inc.: \n (2) Sobeys Québec Inc.: \n (3) Metro Richelieu INC.:")
 Date_Facturation_Statique = input("Entre la date de facturation (YYYY-MM-DD) :")
 Date_Facturation_Statique = datetime.strptime(Date_Facturation_Statique, '%Y-%m-%d')
 
+if Maison_Mere == "1": Maison_Mere = "Loblaws Inc.:"
+if Maison_Mere == "2": Maison_Mere = "Sobeys Québec Inc.:"
+if Maison_Mere == "3": Maison_Mere = "Metro Richelieu INC.:"
+    
 # Calcul de 30 jours pour la date d'Echeance 
 #Date_Echeance_Statique = input("Entre la date d'echeance (YYYY-MM-DD) :")
 Date_Echeance_Statique = Date_Facturation_Statique + timedelta(days=30) 
@@ -88,7 +93,7 @@ with open('input.csv') as csv_file:
                   
                 # Ecrire la ligne dans le fichier output
                 if row[20] !="" :
-                        Line_Output = str(Num_Facture) + ","+ Client + "," + str(Date_Facturation) + "," + str(Date_Echeance) +  ","+ Modalites + "," + "," + Memo + "," + Description_Produit + "," + Article_Description + "," + row[13] + "," + row[15] + "," + str(Montant_Article) + "," + Taxes + "," + "\n"
+                        Line_Output = str(Num_Facture) + ","+ Maison_Mere + Client + "," + str(Date_Facturation) + "," + str(Date_Echeance) +  ","+ Modalites + "," + "," + Memo + "," + Description_Produit + "," + Article_Description + "," + row[13] + "," + row[15] + "," + str(Montant_Article) + "," + Taxes + "," + "\n"
                         output_file.write(Line_Output)
                         Client = ""
                         Date_Facturation = ""
