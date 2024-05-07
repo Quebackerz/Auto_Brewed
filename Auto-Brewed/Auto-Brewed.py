@@ -42,7 +42,7 @@ if Maison_Mere == "1": Maison_Mere_Statique = "Loblaws Inc.:"
 if Maison_Mere == "2": Maison_Mere_Statique = "Sobeys Québec Inc.:"
 if Maison_Mere == "3": Maison_Mere_Statique = "Metro Richelieu INC.:"
 
-Message = "Dépots directs: Caisse Desjardins  30500-815-095-372-9 Veuillez envoyer la confirmation du dépôt.  For direct deposits:  Caisse Desjardins  30500-815-095-372-9  30500-815-095-372-9  Please send payment confirmation.  Veuillez noter que les crédits expirent après 12 mois.  Please note credit memos expire 12 months."
+Message = " / Dépots directs: Caisse Desjardins  30500-815-095-372-9 Veuillez envoyer la confirmation du dépôt.  For direct deposits:  Caisse Desjardins  30500-815-095-372-9  30500-815-095-372-9  Please send payment confirmation.  Veuillez noter que les crédits expirent après 12 mois.  Please note credit memos expire 12 months."
 
 # Calcul de 30 jours pour la date d'Echeance 
 #Date_Echeance_Statique = input("Entre la date d'echeance (YYYY-MM-DD) :")
@@ -65,7 +65,7 @@ with open('input.csv') as csv_file:
         if line_count == 0:
             # Ecrire la premiere ligne dans le fichier
             with open(Fichier_Output_csv, 'a') as output_file:
-                Line_Output = 'No de facture,Client,Date de facturation,Échéance,Modalités,Lieu,Message Affiché sur la facture,Article (produit/service),Description de l’article,Quantité de l’article,Taux de l’article,Montant de l’article,Code de taxe de l’article,Montant de la taxe de l’article\n'
+                Line_Output = 'No de facture,Client,Date de facturation,Échéance,Modalités,Lieu,Mémo,Article (produit/service),Description de l’article,Quantité de l’article,Taux de l’article,Montant de l’article,Code de taxe de l’article,Montant de la taxe de l’article\n'
                 output_file.write(Line_Output)
             line_count += 1
         # Si ce n'est pas la premiere ligne, prendre les valeurs des champs et ecrire dans le bon format pour le output.    
